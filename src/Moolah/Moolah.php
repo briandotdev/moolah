@@ -218,5 +218,7 @@ class Moolah
 
             throw new Exception('An error prevented card processing.');
         }
+
+        throw new Exception('An error prevented card processing.');
     }
 }
