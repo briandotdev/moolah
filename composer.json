@@ -36,7 +36,8 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
+        "test": "./vendor/bin/phpunit --no-logging --colors=always",
+        "test-coverage": "phpdbg -qrr ./vendor/bin/phpunit --coverage-html ./build/coverage --colors=always",
         "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
         "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
     },
