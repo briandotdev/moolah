@@ -1,8 +1,7 @@
 <?php
 
-namespace Moolah;
+namespace Rdrnnr87;
 
-use Rdrnnr87\Moolah;
 use Braintree\Test\Nonces;
 
 class MoolahTest extends \PHPUnit\Framework\TestCase
