@@ -2,6 +2,7 @@
 
 namespace Rdrnnr87;
 
+use Dotenv\Dotenv;
 use Braintree\Test\Nonces;
 
 class MoolahTest extends \PHPUnit\Framework\TestCase
@@ -10,11 +11,14 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
 
     protected function setUp(): void
     {
+        $dotenv = Dotenv::create(dirname(__DIR__, 1));
+        $dotenv->load();
+
         $this->config = [
             'environment' => 'sandbox',
-            'merchantId' => '',
-            'publicKey' => '',
-            'privateKey' => ''
+            'merchantId' => getenv('BRAINTREE_MERCHANT_ID'),
+            'publicKey' => getenv('BRAINTREE_PUBLIC_KEY'),
+            'privateKey' => getenv('BRAINTREE_PRIVATE_KEY')
         ];
     }
 
