@@ -25,7 +25,7 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $moolah = new Moolah($this->config);
         $token = $moolah->getToken();
 
-        $this->assertEquals(strlen($token), 1672);
+        $this->assertEquals(strlen($token), 2184);
     }
 
     /** @test */
@@ -121,11 +121,11 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $this->expectExceptionMessage('The CVV provided does not match card.');
 
         $cardholderDetails = [
-            'cardholderName'    => 'Test User',
-            'cvv'               => '200',
-            'expirationMonth'    => 9,
-            'expirationYear'    => 2018,
-            'number'            => '4111111111111111',
+            'cardholderName' => 'Test User',
+            'cvv' => '200',
+            'expirationMonth' => 9,
+            'expirationYear' => 2018,
+            'number' => '4111111111111111',
         ];
 
         $moolah = new Moolah($this->config);
@@ -157,11 +157,11 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $this->expectExceptionMessage('The CVV provided was not verified by the bank.');
 
         $cardholderDetails = [
-            'cardholderName'    => 'Test User',
-            'cvv'               => '201',
-            'expirationMonth'    => 9,
-            'expirationYear'    => 2018,
-            'number'            => '4111111111111111',
+            'cardholderName' => 'Test User',
+            'cvv' => '201',
+            'expirationMonth' => 9,
+            'expirationYear' => 2018,
+            'number' => '4111111111111111',
         ];
 
         $moolah = new Moolah($this->config);
@@ -175,15 +175,15 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $this->expectExceptionMessage('The postal code provided does not match the card.');
 
         $cardholderDetails = [
-            'cardholderName'    => 'Test User',
-            'cvv'               => '123',
-            'expirationMonth'    => 9,
-            'expirationYear'    => 2018,
-            'number'            => '4111111111111111',
+            'cardholderName' => 'Test User',
+            'cvv' => '123',
+            'expirationMonth' => 9,
+            'expirationYear' => 2018,
+            'number' => '4111111111111111',
         ];
 
         $billingDetails = [
-            'postalCode'    => '20000',
+            'postalCode' => '20000',
         ];
 
         $moolah = new Moolah($this->config);
@@ -219,15 +219,15 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $this->expectExceptionMessage('The postal code provided was not verified by the bank.');
 
         $cardholderDetails = [
-            'cardholderName'    => 'Test User',
-            'cvv'               => '123',
-            'expirationMonth'    => 9,
-            'expirationYear'    => 2018,
-            'number'            => '4111111111111111',
+            'cardholderName' => 'Test User',
+            'cvv' => '123',
+            'expirationMonth' => 9,
+            'expirationYear' => 2018,
+            'number' => '4111111111111111',
         ];
 
         $billingDetails = [
-            'postalCode'    => '20001',
+            'postalCode' => '20001',
         ];
 
         $moolah = new Moolah($this->config);
@@ -241,15 +241,15 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $this->expectExceptionMessage('A system error prevented verification of postal code.');
 
         $cardholderDetails = [
-            'cardholderName'    => 'Test User',
-            'cvv'               => '123',
-            'expirationMonth'    => 9,
-            'expirationYear'    => 2018,
-            'number'            => '4111111111111111',
+            'cardholderName' => 'Test User',
+            'cvv' => '123',
+            'expirationMonth' => 9,
+            'expirationYear' => 2018,
+            'number' => '4111111111111111',
         ];
 
         $billingDetails = [
-            'postalCode'    => '30000',
+            'postalCode' => '30000',
         ];
 
         $moolah = new Moolah($this->config);
