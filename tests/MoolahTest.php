@@ -28,7 +28,7 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
         $moolah = new Moolah($this->config);
         $token = $moolah->getToken();
 
-        $this->assertEquals(strlen($token), 2184);
+        $this->assertEquals(strlen($token), 2408);
     }
 
     /** @test */
