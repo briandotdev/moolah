@@ -11,14 +11,14 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
 
     protected function setUp(): void
     {
-        $dotenv = Dotenv::create(dirname(__DIR__, 1));
+        $dotenv = Dotenv::createImmutable(dirname(__DIR__, 1));
         $dotenv->load();
 
         $this->config = [
             'environment' => 'sandbox',
-            'merchantId' => getenv('BRAINTREE_MERCHANT_ID'),
-            'publicKey' => getenv('BRAINTREE_PUBLIC_KEY'),
-            'privateKey' => getenv('BRAINTREE_PRIVATE_KEY')
+            'merchantId' => $_ENV['BRAINTREE_MERCHANT_ID'],
+            'publicKey' => $_ENV['BRAINTREE_PUBLIC_KEY'],
+            'privateKey' => $_ENV['BRAINTREE_PRIVATE_KEY']
         ];
     }
 
