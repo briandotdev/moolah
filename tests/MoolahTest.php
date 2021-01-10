@@ -16,9 +16,9 @@ class MoolahTest extends \PHPUnit\Framework\TestCase
 
         $this->config = [
             'environment' => 'sandbox',
-            'merchantId' => $_ENV['BRAINTREE_MERCHANT_ID'],
-            'publicKey' => $_ENV['BRAINTREE_PUBLIC_KEY'],
-            'privateKey' => $_ENV['BRAINTREE_PRIVATE_KEY']
+            'merchantId' => $_SERVER['BRAINTREE_MERCHANT_ID'],
+            'publicKey' => $_SERVER['BRAINTREE_PUBLIC_KEY'],
+            'privateKey' => $_SERVER['BRAINTREE_PRIVATE_KEY']
         ];
     }
 
